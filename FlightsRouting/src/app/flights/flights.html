@@ -1,0 +1,7 @@
+<h2> Flights List </h2>
+<ul>
+    <li *ngFor="let f of flights">
+        {{f.name}} - INR. {{f.price}}
+        <button (click)="goToDetails(f.id)"> View Details</button>
+    </li>
+</ul>

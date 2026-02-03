@@ -1,0 +1,74 @@
+<h2>Task Item</h2>
+
+<h2 [ngClass]="{'firstTitle':title==='Module'}">
+    {{title}}
+</h2>
+<h3>{{description}}</h3>
+<h3>{{city}}</h3>
+
+<!-- if else ngIf directive -->
+<div *ngIf="isShow else ifNoShow">
+    True
+</div>
+
+<ng-template #ifNoShow>
+    False
+</ng-template>
+
+<!-- ngFor directive-->
+<div>
+    <div>
+        {{movie_title}}
+    </div>
+    <div>
+        <table class="table" border="1">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Cast</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movie of movies">
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.director}}</td>
+                    <td>{{movie.cast}}</td>
+                    <td>{{movie.releaseDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- switch case ngSwitch-->
+<div [ngSwitch]="role">
+    <p *ngSwitchCase="'admin'">Admin</p>
+    <p *ngSwitchCase="'normal'">Normal</p>
+    <p *ngSwitchCase="'guest'">Guest</p>
+    <p *ngSwitchDefault>Default</p>
+</div>
+
+<!-- below are the attribute directives-->
+   <div>
+    <h2> Shopping website</h2>
+ 
+    <div>
+        <div [ngClass]="{'highlight':isHighlighted, 'italic':isItalic}">
+           This is the  shooping website page for my [ngClass]
+        </div>
+ 
+        <div [ngStyle]="{'color':textColor, 'font-size':fontSize +'px'}">
+           Second div showing the [ngStyle]
+        </div>
+ 
+        <div [ngClass]="{'active':isActive, 'disables': isDisabled}">
+           <button type="button" value="Login"> Login </button>
+        </div>
+ 
+            <input type="text" [(ngModel)]="username">
+            <p> Hello, {{username}}</p>
+     
+    </div>
+   </div>

@@ -1,0 +1,358 @@
+h1 {
+  text-align: center;
+}
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  padding: 0 20px 40px 20px;
+}
+.item-card {
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  border-radius: 6px;
+}
+.card {
+  text-align: center;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.product-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 6em 6em 2.5em 6em;
+  gap: 6em;
+}
+.prod-image {
+  max-width: 300px;
+  max-height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+.brand {
+  text-align: left;
+}
+.back {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.links a {
+  margin-right: 16px; 
+  margin-bottom: 12px;
+  color: black; 
+}
+
+/*
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  padding: 0;
+  background: #fff;
+  color: #000;
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  gap: 20px; /* space between nav links 
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+  transition: border-color 0.3s ease;
+}
+
+.links a:hover {
+  border-bottom: 2px solid black;
+}
+
+.links h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.links.vertical {
+  display: block; /* for vertical links 
+}
+
+.links.vertical a {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+p {
+  border: 1px solid black;
+  padding: 15px;
+  width: 90%;
+  margin: 0 auto 40px auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-weight: bold;
+  margin-left: 10%;
+}
+
+@media (max-width: 600px) {
+  .links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* Home link on top 
+.back {
+  margin: 20px 0 10px 20px;
+  font-weight: bold;
+}
+
+.back a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.back a:hover {
+  border-color: red;
+}
+
+/* Category heading 
+h2 {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 2px solid red;
+  padding-bottom: 10px;
+  margin: 10px 20px 30px 20px;
+  text-transform: capitalize;
+}
+
+/* Container for all product cards 
+.item-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  padding: 0 20px 40px 20px;
+}
+
+/* Individual product card styling 
+.item-card {
+  border: 2px solid red;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Product image styling 
+.item-card img {
+  max-width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Product title 
+.item-card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  height: 50px; /* limit height for consistency 
+  overflow: hidden;
+}
+
+/* Product price 
+.item-card p {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* View link styling 
+.item-card a {
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+  border: 1px solid red;
+  padding: 6px 12px;
+  border-radius: 4px;
+  align-self: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.item-card a:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Container to hold image and details side by side 
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+  border: 2px solid red;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* Image container 
+.product-container > div:first-child {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-right: 2px solid red;
+}
+
+.prod-image {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Details container 
+.product-container > div:nth-child(2) {
+  flex: 2 1 400px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-container h1 {
+  color: red;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-bottom: 2px solid red;
+  padding-bottom: 8px;
+}
+
+.product-container h3 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-container p {
+  line-height: 1.5;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Back link styling 
+.back {
+  margin: 20px 20px 0 20px;
+  font-weight: bold;
+}
+
+.back a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  transition: border-color 0.3s ease;
+}
+
+.back a:hover {
+  border-color: red;
+}
+
+/* Responsive layout for smaller screens 
+@media (max-width: 700px) {
+  .product-container {
+    flex-direction: column;
+    border-right: none;
+  }
+
+  .product-container > div:first-child {
+    border-right: none;
+    border-bottom: 2px solid red;
+    padding-bottom: 20px;
+  }
+}
+*/
+
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
