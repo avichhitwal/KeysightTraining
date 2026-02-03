@@ -1,0 +1,64 @@
+<h2>Flights</h2>
+<div style="padding: 20px">
+  <button (click)="getAllFlights()">GET Flight</button>
+  <button (click)="addFlight()">POST Flight</button>
+  <button (click)="updateFlight()">PUT Flight</button>
+  <button (click)="deleteFlight()">DELETE Flight</button>
+
+  <select [(ngModel)] = "sortOption">
+    <option value=""> Sort By </option>
+    <option value="priceAsc"> Price Asc </option>
+    <option value="priceDesc"> Price Desc </option>
+    <option value="dtAsc"> Dept Time Asc </option>
+    <option value="dtDesc"> Dept Time Desc </option>
+  </select> 
+
+  <!-- <select [(ngModel)] = "selectedCategory">
+    <option value="All"> All </option>
+    <option value="a"> a </option>
+    <option value="b"> b </option>
+    <option value="c"> c </option>
+    <option value="d"> d </option>
+  </select> -->
+  
+  <div *ngIf="flights.length">
+    <h3>Flights: </h3>
+    <ul>
+      <li *ngFor="let flight of flights | flightSort:sortOption">
+        Flight No: {{flight.fno}} | Airline: {{flight.aname | uppercase}} | From: {{flight.src}} | To: {{flight.dest}} | Time: {{flight.dept}} | Price: {{flight.price | currency:'INR'}} | Status: {{flight.status}}
+      </li>
+    </ul>
+  </div>
+</div>
+
+  <!-- <button (click)="getAllProducts()">GET Products</button>
+  <button (click)="addProduct()">POST Products</button>
+  <button (click)="updateProduct()">PUT Products</button>
+  <button (click)="deleteProduct()">DELETE Products</button>
+
+   filtering 
+  <select [(ngModel)] = "selectedCategory">
+    <option value="All"> All </option>
+    <option value="Electronics"> Electronics </option>
+    <option value="Books"> Books </option>
+    <option value="Clothing"> Clothing </option>
+  </select>
+
+  sorting 
+  <select [(ngModel)] = "sortOption">
+    <option value=""> Sort By </option>
+    <option value="priceAsc"> Price Asc </option>
+    <option value="priceDesc"> Price Desc </option>
+    <option value="nameAsc"> Name Asc </option>
+    <option value="nameDesc"> Name Desc </option>
+  </select> 
+  
+  <div *ngIf="products.length">
+    <h3>Products: </h3>
+    <ul>
+      <li *ngFor="let product of products | productCategory:selectedCategory | productSort:sortOption">
+        {{product.name}} - INR. {{product.price | currency:'USD'}}
+      </li>
+    </ul>
+  </div>
+</div> -->

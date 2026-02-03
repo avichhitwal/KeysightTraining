@@ -1,0 +1,42 @@
+<h2>Flights</h2>
+
+
+<div>
+    <table class="table" border="1">
+        <thead>
+            <tr>
+                <th>Flight Number</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Departure Time</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of flights">
+                <td>{{f.flightNo}}</td>
+                <td>{{f.src}}</td>
+                <td>{{f.dest}}</td>
+                <td>{{f.deptTime}}</td>
+                <td [ngStyle]="{'color': f.status === 'On Time' ? 'green' :
+                     f.status === 'Delayed' ? 'orange' :
+                     'red'}">{{f.status}}</td>
+                <td>
+                    <div *ngIf="f.status === 'On Time'">
+                        Flight is On Time
+                    </div>
+                    <div *ngIf="f.status === 'Delayed'; else Cancelled">
+                        Flight is delayed
+                    </div>
+
+                    <ng-template #Cancelled>
+                        <div *ngIf="f.status === 'Cancelled'">
+                        Flight has been cancelled
+                        </div>
+                    </ng-template>
+                </td>            
+            </tr>
+        </tbody>
+    </table>
+</div>
+
