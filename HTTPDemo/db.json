@@ -1,0 +1,48 @@
+{
+  "flights": [
+    {
+      "fid": 2,
+      "fno": 22,
+      "aname": "Airline2",
+      "src": "b",
+      "dest": "c",
+      "dept": "10:00",
+      "price": 2000,
+      "status": "Delayed",
+      "id": "1de8"
+    },
+    {
+      "fid": 3,
+      "fno": 33,
+      "aname": "Airline3",
+      "src": "c",
+      "dest": "d",
+      "dept": "11:00",
+      "price": 3000,
+      "status": "Cancelled",
+      "id": "ba8f"
+    },
+    {
+      "id": "d0a7",
+      "fid": 1,
+      "fno": 11,
+      "aname": "A",
+      "src": "a",
+      "dest": "x",
+      "dept": "9:00",
+      "price": 1000,
+      "status": "On Time"
+    },
+    {
+      "id": "b594",
+      "fid": 1,
+      "fno": 11,
+      "aname": "A",
+      "src": "a",
+      "dest": "x",
+      "dept": "9:00",
+      "price": 1000,
+      "status": "On Time"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<h2> Flight Detail </h2>
+<div *ngIf="flight">
+   <p> Name : {{flight.name}} </p>
+   <p> Price : {{flight.price}} </p>
+</div>
+ 
+<div *ngIf="!flight">
+   <p> Flight not found</p>
+</div>

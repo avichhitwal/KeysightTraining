@@ -1,0 +1,48 @@
+<!-- <app-header></app-header>
+<div>
+  <h2> Service: Products</h2>
+  <button type="button" (click)="getProducts()"> Fetch Products</button>
+ 
+  <div>
+    <table class="table" border="1">
+        <thead>
+         <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Price </th>
+         </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of products">
+             <td>{{p.productId}}</td>
+             <td>{{p.name}}</td>
+             <td>{{p.price}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+</div>
+<app-footer></app-footer> -->
+
+<h2>Sailor Data</h2>
+<h3>{{message}}</h3>
+<div>
+    <table class="table" border="1">
+        <thead>
+         <tr>
+            <th> ID </th>
+            <th> Name </th>
+            <th> Rating </th>
+         </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of newData">
+             <td>{{s.id}}</td>
+             <td>{{s.sname}}</td>
+             <td>{{s.rating}}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+
+<app-footer></app-footer>
